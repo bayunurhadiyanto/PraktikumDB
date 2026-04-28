@@ -17,6 +17,29 @@
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(10px);
         }
+<<<<<<< HEAD
+=======
+
+        @keyframes blob {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+        }
+
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+>>>>>>> 690d8aa (Selesai fitur CRUD Event sesuai Modul 5)
     </style>
 </head>
 
@@ -36,6 +59,7 @@
             <a href="#" class="hover:text-indigo-600 transition">Kategori</a>
             <a href="#" class="hover:text-indigo-600 transition">Tentang Kami</a>
         </div>
+<<<<<<< HEAD
         <div class="flex gap-3">
             <a href="{{ route('admin.dashboard') }}"
                 class="px-5 py-2.5 rounded-xl font-semibold hover:bg-slate-200 transition">Admin Panel</a>
@@ -43,6 +67,11 @@
     </nav>
 
     <!-- Main Content Area -->
+=======
+    </nav>
+
+    <!-- Content -->
+>>>>>>> 690d8aa (Selesai fitur CRUD Event sesuai Modul 5)
     @yield('content')
 
     <!-- Footer -->
@@ -81,4 +110,7 @@
 
 </body>
 
+<<<<<<< HEAD
 </html>
+=======
+>>>>>>> 690d8aa (Selesai fitur CRUD Event sesuai Modul 5)
