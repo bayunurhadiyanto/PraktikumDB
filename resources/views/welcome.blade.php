@@ -108,5 +108,27 @@
             @endforeach
         </div>
     </section>
+
+    <!-- Partners Section -->
+    <section class="max-w-7xl mx-auto px-6 py-20 bg-gray-50 rounded-3xl">
+        <div class="mb-12 text-center">
+            <h2 class="text-3xl font-extrabold mb-2">Mitra Kami</h2>
+            <p class="text-slate-500 font-medium">Dipercaya oleh berbagai mitra terkemuka</p>
+        </div>
+
+        @if($partners->count() > 0)
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            @foreach($partners as $partner)
+            <div class="flex items-center justify-center bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition min-h-[150px]">
+                <img src="{{ $partner->logo_url }}" alt="{{ $partner->name }}" class="max-w-full max-h-24 object-contain" loading="lazy">
+            </div>
+            @endforeach
+        </div>
+        @else
+        <div class="text-center text-gray-500 py-12">
+            <p class="text-lg">Belum ada data partner</p>
+        </div>
+        @endif
+    </section>
 @endsection
 
