@@ -84,7 +84,13 @@ class EventController extends Controller
 
     public function destroy(Event $event)
     {
+        // Hapus file poster dari storage jika ada untuk menghindari pemborosan ruang
+        if ($event->poster_path && Storage::disk('public')->exists($event->poster_path)) {
+            Storage::disk('public')->delete($event->poster_path);
+        }
+
         $event->delete();
+
         return redirect()->route('admin.events.index')->with('success', 'Data event berhasil dihapus secara permanen.');
     }
 }
